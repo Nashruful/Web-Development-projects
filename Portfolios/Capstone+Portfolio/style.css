@@ -1,0 +1,33 @@
+#header-container{
+    background-color: #f8dbc2;
+    height: 700px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #51829B;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    color: #51829B;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+.custom-hr{
+    border-color: #f8dbc2;
+}
+.resume-btn-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+.resume-btn-container .btn {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F6995C;
+    border: none;
+}

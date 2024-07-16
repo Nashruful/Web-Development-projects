@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>Add an item?</h1>
+    <form id="todo-form">
+        <input id="todo-input" type="text">
+        <button type="submit">Add</button>
+    </form>
+    <ul id="todo-list"></ul>
+
+        <script>
+            var items = [];
+            function addItems(event){
+                event.preventDefault();
+            const input = document.getElementById("todo-input");
+            const name = input.value
+
+            items.push(name);
+            input.value ='';
+            renderItems();
+
+            
+            }
+            function renderItems(){
+              const list =document.getElementById("todo-list");
+              list.innerHTML = '';
+
+              items.forEach(item=>{
+                const li = document.createElement("li");
+                li.textContent=item;
+                list.appendChild(li);
+                li.addEventListener('click',()=>{
+                    items.splice(index,1);
+                    renderItems();
+                })
+              })
+            }
+            
+            document.getElementById("todo-form").addEventListener("submit",addItems);
+        </script>
