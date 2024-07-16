@@ -1,0 +1,16 @@
+# Ignore sensitive files
+credentials.json
+.env
+
+# Ignore build artifacts and dependencies
+node_modules/
+dist/
+*.log
+
+# Ignore IDE/Editor specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Add any other files/directories you want to ignore
